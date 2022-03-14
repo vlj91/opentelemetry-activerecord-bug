@@ -28,3 +28,5 @@ group :development do
   # gem "spring"
 end
 
+gem 'opentelemetry-instrumentation-active_record'
+gem 'opentelemetry-sdk'

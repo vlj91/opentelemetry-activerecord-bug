@@ -1,24 +1,18 @@
-# README
+1. Create a task
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+```
+http POST :3000/tasks title=test
+```
 
-Things you may want to cover:
+2. Delete the task
 
-* Ruby version
+```
+http DELETE :3000/tasks/1
+```
 
-* System dependencies
+3. `ArgumentError` thrown for `#destroy`
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+app/controllers/tasks_controller.rb:29:in `destroy'
+```

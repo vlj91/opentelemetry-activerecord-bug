@@ -111,6 +111,21 @@ GEM
     nokogiri (1.13.3)
       mini_portile2 (~> 2.8.0)
       racc (~> 1.4)
+    opentelemetry-api (1.0.1)
+    opentelemetry-common (0.19.3)
+      opentelemetry-api (~> 1.0)
+    opentelemetry-instrumentation-active_record (0.2.2)
+      opentelemetry-api (~> 1.0)
+      opentelemetry-instrumentation-base (~> 0.19.0)
+    opentelemetry-instrumentation-base (0.19.0)
+      opentelemetry-api (~> 1.0)
+    opentelemetry-sdk (1.0.2)
+      opentelemetry-api (~> 1.0)
+      opentelemetry-common (~> 0.19.3)
+      opentelemetry-instrumentation-base (~> 0.19.0)
+      opentelemetry-semantic_conventions
+    opentelemetry-semantic_conventions (1.8.0)
+      opentelemetry-api (~> 1.0)
     puma (5.6.2)
       nio4r (~> 2.0)
     racc (1.6.0)
@@ -162,6 +177,8 @@ PLATFORMS
 
 DEPENDENCIES
   debug
+  opentelemetry-instrumentation-active_record
+  opentelemetry-sdk
   puma (~> 5.0)
   rails (~> 7.0.2, >= 7.0.2.3)
   sqlite3 (~> 1.4)
